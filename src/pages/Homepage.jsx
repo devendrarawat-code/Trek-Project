@@ -101,6 +101,7 @@ const Homepage = () => {
       price: 1600,
       originalPrice: 2000,
     },
+  
   ];
   const ridersPackageData = [
     {
@@ -217,7 +218,7 @@ const Homepage = () => {
       </div>
       <HighlightedText text={"Ride the Rapids \nWith Us"} />
       <div className="package-section-rapids">
-      
+       <div className="inner">
           {rapidsPackageData.map((card, index) => (
             <AdventureCards
               key={index}
@@ -231,8 +232,10 @@ const Homepage = () => {
             />
           ))}
         </div>
+        </div>
       <HighlightedText text={"Riders, meet your perfect \nroad companion."} />
       <div className="package-section-rapids">
+        <div className="inner">
           {ridersPackageData.map((card, index) => (
             <AdventureCards
               key={index}
@@ -245,6 +248,7 @@ const Homepage = () => {
               originalPrice={card.originalPrice}
             />
           ))}
+        </div>
         </div>
       <HighlightedText
         text={"Trusted by over 200 clients, \nwho chose adventure with us."}

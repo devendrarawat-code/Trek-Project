@@ -43,26 +43,6 @@ body {
   object-fit: cover;
 }
 
-.menu-icon,
-.close-icon {
-  cursor: pointer;
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  background-color: white;
-  display: flex;
-  align-items: center;
-}
-.menu-icon {
-  display: none;
-}
-.close-icon {
-  display: none;
-  position: fixed;
-  top: 20px;
-  left: 20px;
-}
-
 .nav-links {
   display: flex;
   list-style: none;
@@ -111,6 +91,19 @@ body {
   cursor: pointer;
   border: none;
 }
+.menu-icon{
+  display: none;
+}
+.close-icon{
+  display: none;
+}
+.overlay{
+  display: none;
+}
+.sidebar{
+  display: none;
+}
+
 .hero-section,
 .trek-hero-section,
 .rafting-hero-section {
@@ -304,6 +297,7 @@ height: inherit;
   font-weight: 500;
   font-size: 36px;
   line-height: 150%;
+  width: 90vw;
   letter-spacing: 0.9px;
   vertical-align: middle;
 }
@@ -331,7 +325,6 @@ height: inherit;
 }
 
 .category-card {
- 
   width: 100%;
   background-size: cover;
   background-position: center;
@@ -476,10 +469,12 @@ font-style: SemiBold;
   padding-top: 0.5rem;
   display: flex;
   justify-content: flex-start;
+  align-items: center;
   gap: 10px;
   height: 30px;
 }
 .price {
+  margin: 0px;
   font-weight: 600;
   font-size: 24px;
   color: #000000cc;
@@ -491,7 +486,7 @@ font-style: SemiBold;
   text-decoration: line-through;
 }
 .card-footer {
-  margin-top: 17px;
+  margin-top: 10px;
   cursor: pointer;
   height: 70px;
   display: flex;
@@ -506,7 +501,6 @@ font-style: SemiBold;
   align-items: center;
   font-size: 23px;
   background: white;
-  background: white;
   border: 2px solid #f37002;
 }
 .svg{
@@ -514,6 +508,7 @@ font-style: SemiBold;
   width: 30px;
 }
 .book-btn {
+  border: 0px;
   font-family: Poppins;
   font-weight: 500;
   font-size: 20px;
@@ -521,39 +516,34 @@ font-style: SemiBold;
   letter-spacing: 0.4px;
   color: #ffffff;
   border-radius: 6px;
-  width: 390px;
   background-color: #f37002;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 390px;
+  width: 85%;
 }
 
 .review-cards {
-  overflow: hidden;
-  width: 100%;
-  max-width: 480px;
-  max-height: 490px;
+  padding: 0px 35px;
+  width: 30%;
+  aspect-ratio: 1/1;
   border-radius: 20px;
   background-color: #d9d9d963;
+  box-sizing: border-box;
 }
 
 .quote-icon {
   display: flex;
-  width: 80px;
   max-height: 80px;
   font-family: Potta One;
   font-weight: 400;
   font-size: 125px;
   line-height: 145%;
+  position: relative;
   letter-spacing: 0.9px;
-  margin-left: 25px;
-
   color: #000000;
 }
 .review-text {
-  padding-right: 10px;
-  margin-left: 35px;
   font-family: Poppins;
   font-weight: 500;
   font-size: 20px;
@@ -562,7 +552,6 @@ font-style: SemiBold;
   color: #000000;
 }
 .customer-name {
-  margin-left: 35px;
   margin-top: 10px;
   font-family: Poppins;
   font-weight: 500;
@@ -572,7 +561,6 @@ font-style: SemiBold;
   vertical-align: middle;
 }
 .activity-name {
-  margin-left: 35px;
   font-family: Poppins;
   font-weight: 500;
   font-size: 16px;
@@ -584,23 +572,23 @@ font-style: SemiBold;
 }
 .divider {
   margin-top: 42px;
-  width: 80%;
+  width: 100%;
   height: 1px;
   border-radius: 100px;
+  background-color: #000000;
 }
 .review-container {
   margin-top: 62px;
-  height: 1040px;
   padding: 0px 94px;
+  display: flex;
+  justify-content: center;
 }
 .reviewcard-grid {
-  gap: 20px;
+  gap: 50px;
   flex-wrap: wrap;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  overflow: hidden;
+  display: flex;
+  justify-content: center;
   scrollbar-width: none;
-  width: 100%;
 }
 .footer {
   color: #ffffff;
@@ -1254,6 +1242,7 @@ font-style: SemiBold;
     height: 60px;
     width: calc(100vw - 40px);
     margin: 20px 0;
+
   }
 
   .img-text {
@@ -1270,32 +1259,80 @@ font-style: SemiBold;
     padding-left: 0;
   }
 
-  .menu-icon {
-    position: absolute;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    right: 5px;
-  }
 
-  .nav-links {
-    display: none;
-    align-items: center;
-    gap: 10px;
-    font-size: 14px;
-    margin-top: 10px;
-  }
-
-  .nav-links li {
-    font-size: 14px;
-  }
-
-  .login-btn {
-    width: 100%;
-    font-size: 16px;
-    height: 50px;
+  .nav-links,.login-btn{
     display: none;
   }
+  .menu-icon,.close-icon{
+    display: block;
+ position: absolute;
+  right: 5px;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: white;
+}
+.close-icon{
+  position: fixed;
+  left: 25px;
+  top: 25px;  
+  z-index: 102;
+}
+.sidebar{
+  display: flex;
+ position: fixed;
+ right: -100%;
+ width: 70vw;
+ height: 100vh;
+ background-color: white;
+ transition: right 1s ease-in-out;
+z-index: 102;
+
+}
+.sidebar.open{
+  right: 0;
+  top: 0;
+}
+.sidebar ul{
+  padding: 15px 11px;
+  width: 100%;
+  gap: 10px;
+  list-style: none;
+  display: flex;
+ align-items: center;
+  flex-direction: column;
+}
+.sidebar li{
+font-family: Poppins;
+font-weight: 500;
+font-style: Medium;
+font-size: 20px;
+line-height: 100%;
+width: 90%;
+color: white;
+background-color: black;
+display: flex;
+align-items: center;
+justify-content: center;
+backdrop-filter: blur(50px);
+height: 7vh;
+border-radius: 50px;
+}
+.overlay{
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(10px);
+
+  z-index: 101;
+}
+
 
   .hero-section,
   .trek-hero-section,
@@ -1374,7 +1411,6 @@ font-weight: 600;
   font-size: 14px;
 }
   .card-footer {
-    border: 1px solid black;
     height: 50px;
     gap: 9px;
   }
@@ -1382,6 +1418,16 @@ font-weight: 600;
   width: 40px;
   height: 40px;
 }
+.svg{
+  height: 18px;
+  width: 18px;
+  display: flex;
+}
+  .book-btn{
+height: 41px;
+font-size: 14px;
+  }
+
   .highlight-container {
     padding-left: 20px;
     margin-top: 30px;
@@ -1405,29 +1451,42 @@ font-weight: 600;
  padding: 0px 20px;
     flex-direction: column;
     height: auto;
+  } .pack-card{
+   max-width: 100%;
+   min-width: 100%;
   }
 
-  .pack-card,
   .review-cards {
-    min-width: 100%;
-    max-width: 100%;
+    padding: 0px 18px;
+   width: 100%;
   }
 
   .reviewcard-grid {
     grid-template-columns: 1fr;
+    gap: 15px;
     padding: 0px 20px;
   }
 
 .duration,
 .card-rating,
-.review-count
+.review-count,.activity-name
 {
   font-size: 14px;
 }
 .package-title,
-.price,.original-price{
+.price,.original-price,.customer-name{
   font-size: 18px;
 }
+.review-container{
+  padding: 0px 0px;
+}
+.review-text {
+  font-size: 16px;
+}
+.divider{
+  margin-top: 15px;
+}
+
   .footer {
     height: auto;
   }
