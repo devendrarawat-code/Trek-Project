@@ -24,7 +24,7 @@ body {
   justify-content: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   position: fixed;
-  z-index: 1000;
+  z-index: 100 ;
   border-radius: 50px;
 }
 .img-text {
@@ -505,7 +505,13 @@ font-style: SemiBold;
   justify-content: center;
   align-items: center;
   font-size: 23px;
+  background: white;
+  background: white;
   border: 2px solid #f37002;
+}
+.svg{
+  height: 30px;
+  width: 30px;
 }
 .book-btn {
   font-family: Poppins;
