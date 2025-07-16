@@ -4,6 +4,7 @@ const ValleyDetails = () => {
   return (
     <>
       <div className="details-section">
+        <div className="upper-section">
         <div className="location">Valley of Flower</div>
         <div className="location-description">
           A Trail of Flowers, A Journey to <br /> Peace.
@@ -97,6 +98,7 @@ const ValleyDetails = () => {
           </div>
         </div>
          <hr className="line"/>
+         </div>
         <div className="highlight-section">
           <div className="highlight-title">Highlights of the trip</div>
           <p>

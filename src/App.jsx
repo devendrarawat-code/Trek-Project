@@ -6,9 +6,9 @@ import Raftingpage from './pages/Raftingpage'
 function App() {
   return (
     <>
-   <Homepage/>
-   {/* <TrekkingPage/>
-   <Raftingpage/> */}
+   {/* <Homepage/> */}
+   <TrekkingPage/>
+   {/* <Raftingpage/> */}
     </>
   )
 }

@@ -12,6 +12,7 @@ body {
   justify-content: center;
 }
 
+/* header section */
 .header {
   margin: 50px 64px 0px;
   width: calc(100vw - 128px);
@@ -24,7 +25,7 @@ body {
   justify-content: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   position: fixed;
-  z-index: 100 ;
+  z-index: 100;
   border-radius: 50px;
 }
 .img-text {
@@ -42,7 +43,6 @@ body {
   border-radius: 50px;
   object-fit: cover;
 }
-
 .nav-links {
   display: flex;
   list-style: none;
@@ -91,19 +91,20 @@ body {
   cursor: pointer;
   border: none;
 }
-.menu-icon{
+.menu-icon {
   display: none;
 }
-.close-icon{
+.close-icon {
   display: none;
 }
-.overlay{
+.overlay {
   display: none;
 }
-.sidebar{
+.sidebar {
   display: none;
 }
 
+/* upper section css (hero section and all) */
 .hero-section,
 .trek-hero-section,
 .rafting-hero-section {
@@ -164,7 +165,7 @@ body {
   top: 141px;
 }
 .trustbox-container {
-    width: 350px;
+  width: 350px;
   height: 350px;
   right: 2.5%;
   top: 50%;
@@ -172,7 +173,7 @@ body {
 }
 .trust-box {
   color: #ffffff;
-height: inherit;
+  height: inherit;
   border-radius: 20px;
   background: #0000004f;
   backdrop-filter: blur(10px);
@@ -183,6 +184,8 @@ height: inherit;
   top: 480px;
   left: 69px;
 }
+
+/* trustbox css */
 .circle-box {
   display: flex;
   position: relative;
@@ -211,7 +214,7 @@ height: inherit;
   background-color: #e90909;
   z-index: 4;
 }
-.box-heading { 
+.box-heading {
   font-family: Poppins;
   font-weight: 500;
   font-size: 24px;
@@ -230,8 +233,6 @@ height: inherit;
   padding: 10px 0px 0px 24px;
 }
 .rating {
-  width: 247px;
-  height: 71px;
   font-family: Poppins;
   font-weight: 500;
   font-size: 64px;
@@ -240,7 +241,11 @@ height: inherit;
   vertical-align: middle;
   padding: 25px 0px 0px 24px;
 }
+.rating svg{
+  vertical-align: top;
+}
 
+/* subtitle container box css */
 .subtitle-container {
   font-size: 20px;
   width: 230px;
@@ -250,9 +255,12 @@ height: inherit;
   position: absolute;
 }
 .trek-subtitle-container {
+  height: 70px;
+  width: 230px;
   top: 353px;
   left: 69px;
   position: absolute;
+  box-sizing: border-box;
 }
 .subtitle-tag {
   height: 100%;
@@ -267,7 +275,7 @@ height: inherit;
   height: inherit;
   font-family: Poppins;
   font-weight: 500;
-
+font-size: 20px;
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
@@ -283,7 +291,9 @@ height: inherit;
   justify-content: center;
   align-items: center;
 }
-
+ 
+/* center text css like Find your perfect
+Escape */
 .highlight-container {
   width: calc(100%-94px);
   height: fit-content;
@@ -310,6 +320,7 @@ height: inherit;
   background-color: #f37002;
 }
 
+/* css for card selection section */
 .card-selection {
   margin-top: 74px;
   display: flex;
@@ -324,6 +335,7 @@ height: inherit;
   scrollbar-width: none;
 }
 
+/* css for category card including trekking rafting etc */
 .category-card {
   width: 100%;
   background-size: cover;
@@ -338,7 +350,7 @@ height: inherit;
 }
 
 .category-content {
-   background  : linear-gradient(
+  background: linear-gradient(
     180deg,
     rgba(0, 0, 0, 0) 0%,
     rgba(0, 0, 0, 0.54) 100%
@@ -349,11 +361,10 @@ height: inherit;
   position: absolute;
   pointer-events: none;
   bottom: 0;
-
 }
 
 .category-title {
-font-style: SemiBold;
+  font-style: SemiBold;
   font-size: 32px;
   margin: 0;
 }
@@ -365,6 +376,7 @@ font-style: SemiBold;
   flex-wrap: wrap;
 }
 
+/* css for package selecting section */
 .package-section-trekking,
 .package-section-rapids {
   margin-top: 50px;
@@ -388,6 +400,7 @@ font-style: SemiBold;
   top: 2780px;
 }
 
+/* package card and the content inside them css */
 .pack-card {
   width: 100%;
   transition: all 0.3s ease-in-out;
@@ -503,7 +516,7 @@ font-style: SemiBold;
   background: white;
   border: 2px solid #f37002;
 }
-.svg{
+.svg {
   height: 30px;
   width: 30px;
 }
@@ -523,6 +536,23 @@ font-style: SemiBold;
   width: 85%;
 }
 
+
+/* css for the review cards and the content inside them */
+
+.review-container {
+  margin-top: 62px;
+  padding: 0px 94px;
+  display: flex;
+  justify-content: center;
+}
+.reviewcard-grid {
+  gap: 50px;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  scrollbar-width: none;
+}
+/* review card css */
 .review-cards {
   padding: 0px 35px;
   width: 30%;
@@ -531,7 +561,6 @@ font-style: SemiBold;
   background-color: #d9d9d963;
   box-sizing: border-box;
 }
-
 .quote-icon {
   display: flex;
   max-height: 80px;
@@ -577,19 +606,7 @@ font-style: SemiBold;
   border-radius: 100px;
   background-color: #000000;
 }
-.review-container {
-  margin-top: 62px;
-  padding: 0px 94px;
-  display: flex;
-  justify-content: center;
-}
-.reviewcard-grid {
-  gap: 50px;
-  flex-wrap: wrap;
-  display: flex;
-  justify-content: center;
-  scrollbar-width: none;
-}
+/* footer section css */
 .footer {
   color: #ffffff;
   width: 100%;
@@ -653,6 +670,8 @@ font-style: SemiBold;
   text-align: center;
   vertical-align: middle;
 }
+
+/* trust box for the trek page */
 .trek-trust-box {
   width: 350px;
   height: 285px;
@@ -669,12 +688,17 @@ font-style: SemiBold;
   letter-spacing: 0%;
   vertical-align: middle;
 }
+
+/* side carousel containing pictures for trekking and rafting page */
 .side-carousel {
   right: 10px;
   top: 65%;
   position: absolute;
   height: 270px;
   width: 45%;
+}
+.image-cards{
+display: none;
 }
 .carousel-wrapper {
   height: 100%;
@@ -900,7 +924,9 @@ font-style: SemiBold;
 .textarea input {
   height: 200px;
 }
-
+.trek-highlight{
+  display: none;
+}
 .details {
   padding: 0px 120px;
   display: flex;
@@ -1223,6 +1249,7 @@ font-style: SemiBold;
 .discount-box hr {
   margin-top: 30px;
 }
+
 .discount-box button {
   margin-top: 20px;
   width: 100%;
@@ -1242,7 +1269,6 @@ font-style: SemiBold;
     height: 60px;
     width: calc(100vw - 40px);
     margin: 20px 0;
-
   }
 
   .img-text {
@@ -1259,87 +1285,87 @@ font-style: SemiBold;
     padding-left: 0;
   }
 
-
-  .nav-links,.login-btn{
+  .nav-links,
+  .login-btn {
     display: none;
   }
-  .menu-icon,.close-icon{
+  .menu-icon,
+  .close-icon {
     display: block;
- position: absolute;
-  right: 5px;
-  height: 50px;
-  width: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  background-color: white;
-}
-.close-icon{
-  position: fixed;
-  left: 25px;
-  top: 25px;  
-  z-index: 102;
-}
-.sidebar{
-  display: flex;
- position: fixed;
- right: -100%;
- width: 70vw;
- height: 100vh;
- background-color: white;
- transition: right 1s ease-in-out;
-z-index: 102;
-
-}
-.sidebar.open{
-  right: 0;
-  top: 0;
-}
-.sidebar ul{
-  padding: 15px 11px;
-  width: 100%;
-  gap: 10px;
-  list-style: none;
-  display: flex;
- align-items: center;
-  flex-direction: column;
-}
-.sidebar li{
-font-family: Poppins;
-font-weight: 500;
-font-style: Medium;
-font-size: 20px;
-line-height: 100%;
-width: 90%;
-color: white;
-background-color: black;
-display: flex;
-align-items: center;
-justify-content: center;
-backdrop-filter: blur(50px);
-height: 7vh;
-border-radius: 50px;
-}
-.overlay{
-  display: block;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  backdrop-filter: blur(10px);
-
-  z-index: 101;
-}
-
+    position: absolute;
+    right: 5px;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: white;
+  }
+  .close-icon {
+    position: fixed;
+    left: 25px;
+    top: 25px;
+    z-index: 102;
+  }
+  .sidebar {
+    display: flex;
+    position: fixed;
+    right: -100%;
+    width: 70vw;
+    height: 100vh;
+    background-color: white;
+    transition: right 1s ease-in-out;
+    z-index: 102;
+  }
+  .sidebar.open {
+    right: 0;
+    top: 0;
+  }
+  .sidebar ul {
+    padding: 15px 11px;
+    width: 100%;
+    gap: 10px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .sidebar li {
+    font-family: Poppins;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 20px;
+    line-height: 100%;
+    width: 90%;
+    color: white;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(50px);
+    height: 7vh;
+    border-radius: 50px;
+  }
+  .overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(10px);
+    z-index: 101;
+  }
 
   .hero-section,
-  .trek-hero-section,
+ 
   .rafting-hero-section {
     height: 652px;
   }
-
+ .trek-hero-section{
+  height: 500px;
+ }
   .headline-1,
   .trek-headline-1,
   .rafting-headline-1 {
@@ -1349,7 +1375,10 @@ border-radius: 50px;
     width: 50vw;
     top: 158px;
   }
-
+.trek-headline-1,
+  .rafting-headline-1{
+    top: 40px;
+  }
   .headline-2,
   .trek-headline-2,
   .rafting-headline-2 {
@@ -1358,16 +1387,25 @@ border-radius: 50px;
     font-size: 20px;
     top: 187px;
   }
+   .trek-headline-2,
+  .rafting-headline-2 {
+    top: 69px;
+  }
   .circle {
     height: 30px;
     width: 30px;
   }
   .box-heading {
-   padding-left: 15px;
+    padding-top: 10px;
+    padding-left: 15px;
+    line-height: 20px;
     font-size: 16px;
   }
+  .trek-rating{
+    font-size: 48px;
+    padding: 15px 0px 0px 15px;
+  }
 
-  .trek-trustbox-container,
   .subtitle-container,
   .trek-subtitle-container,
   .rafting-subtitle-container {
@@ -1378,54 +1416,83 @@ border-radius: 50px;
     font-size: 14px;
     position: absolute;
   }
-   .trustbox-container{
+   .trek-subtitle-container,
+  .rafting-subtitle-container {
+    top: 140px;
+  }
+.trek-trustbox-container {
+  position: absolute;
+top: 243px;
+left: 20px;
+
+
+}
+.button-section{
+display: none;
+}
+
+
+  .trek-trust-box{
+    width: 250px;
+height: 194px;
+font-size: 16px;
+
+  }
+.side-carousel,.upper-section{
+  display: none;
+}
+  .image-cards{
+  box-sizing: border-box;
+  padding: 0px 15px 0px 20px;
+}
+
+  .trustbox-container {
     left: 20px;
     position: absolute;
     top: 376px;
-height: 250px;
-width: 250px;
-   }
+    height: 250px;
+    width: 250px;
+  }
   .tag-icon {
     width: 40px;
     height: 40px;
   }
-
-  .trust-box {
-    height: 250px;
-    width: 250px;
+  .tag-label{
+    font-size: 14px;
   }
+
   .box-subheading {
     line-height: 110%;
-    padding:10px 3px 0px 15px;
+    padding: 10px 3px 0px 15px;
     font-size: 12px;
   }
-.rating{
-  padding: 17px;
-  font-size: 48px;
-}
-.category-title{
-font-weight: 600;
-  font-size: 24px;
-}
-.category-description{
-  font-size: 14px;
-}
+  .rating {
+    padding: 17px;
+    font-size: 48px;
+  }
+  .category-title {
+    font-weight: 600;
+    font-size: 24px;
+  }
+  .category-description {
+    font-size: 14px;
+  }
   .card-footer {
     height: 50px;
     gap: 9px;
   }
-.call-btn {
-  width: 40px;
-  height: 40px;
-}
-.svg{
-  height: 18px;
-  width: 18px;
-  display: flex;
-}
-  .book-btn{
-height: 41px;
-font-size: 14px;
+  .call-btn {
+    width: 40px;
+    height: 40px;
+  }
+  .svg {
+    height: 18px;
+    width: 18px;
+    display: flex;
+  }
+  .book-btn {
+    height: 41px;
+    font-size: 14px;
   }
 
   .highlight-container {
@@ -1437,28 +1504,39 @@ font-size: 14px;
     font-size: 20px;
     line-height: 150%;
   }
+.scroll-btn{
+  display: none;
+}
+.imagecarousel-container{
+  height: 126px;
+}
 
+
+
+  .trek-highlight{
+  display: block;
+}
   .underline {
     margin-top: 10px;
     margin-left: 20px;
     width: 80px;
   }
-
   .card-selection,
   .package-section-trekking,
   .package-section-rapids {
     margin-top: 25px;
- padding: 0px 20px;
+    padding: 0px 20px;
     flex-direction: column;
     height: auto;
-  } .pack-card{
-   max-width: 100%;
-   min-width: 100%;
+  }
+  .pack-card {
+    max-width: 100%;
+    min-width: 100%;
   }
 
   .review-cards {
     padding: 0px 18px;
-   width: 100%;
+    width: 100%;
   }
 
   .reviewcard-grid {
@@ -1467,25 +1545,27 @@ font-size: 14px;
     padding: 0px 20px;
   }
 
-.duration,
-.card-rating,
-.review-count,.activity-name
-{
-  font-size: 14px;
-}
-.package-title,
-.price,.original-price,.customer-name{
-  font-size: 18px;
-}
-.review-container{
-  padding: 0px 0px;
-}
-.review-text {
-  font-size: 16px;
-}
-.divider{
-  margin-top: 15px;
-}
+  .duration,
+  .card-rating,
+  .review-count,
+  .activity-name {
+    font-size: 14px;
+  }
+  .package-title,
+  .price,
+  .original-price,
+  .customer-name {
+    font-size: 18px;
+  }
+  .review-container {
+    padding: 0px 0px;
+  }
+  .review-text {
+    font-size: 16px;
+  }
+  .divider {
+    margin-top: 15px;
+  }
 
   .footer {
     height: auto;
@@ -1509,28 +1589,70 @@ font-size: 14px;
   .include-box span {
     font-size: 16px;
   }
-
-  .carousel-grid {
-    padding: 0px 10px;
+.valley-details{
+  box-sizing: border-box;
+  min-width: 100vw;
+  width: 100vw;
+}
+  .carousel {
     gap: 10px;
   }
 
-  .carousel-item {
-    min-width: 150px;
+ .carousel-grid{
+    padding: 20px 10px 0px 20px;
+    overflow: scroll;
+position: relative;
+ }
+  .carousel-item, .carousel-item img{
+   height: 126px;
+   width: 126px;
+   min-height: 126px;
   }
+.highlight-section{
+  width: 100vw;
+}
+.highlight-section p{
+  width: 90vw;
+font-weight: 400;
+font-size: 20px;
+line-height: 1.1;
+letter-spacing: 2;
+color: #000000;
+
+}
+.itinerary-container{
+  width: 90vw;
+}
 
   .itinerary-tabs {
     flex-direction: column;
+    flex-wrap: wrap;
     gap: 10px;
   }
 
-  .itinerary-tab {
-    width: 100%;
+  .itinerary-tab{
+    width: 50%;
   }
-
-  .details {
+.itinerary-card{
+  box-sizing: border-box;
+}
+.itinerary-title
+{  font-size: 16px;
+}
+.itinerary-desciption,.itinerary-list{
+  font-size: 14px;
+  line-height: 100%;
+}
+  .details { 
     padding: 0px 20px;
   }
+  .itinerary-list-title{
+    font-size: 18px;
+  }
+  .highlight-title{
+width: 90vw;
+  }
+
 
   .btn-orange-1,
   .btn-orange-2,
@@ -1547,7 +1669,9 @@ font-size: 14px;
   .booking-section {
     max-width: 100%;
   }
-
+.booking-one{
+  display: none;
+}
   .form-box {
     padding: 15px;
   }
