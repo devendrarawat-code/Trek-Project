@@ -27,6 +27,7 @@ const CardCarousel = ({ items, variant = "default" }) => {
             <div className="description">
               <div className="upper-info">{item.date}</div>
               <div className="info">{item.desc}</div>
+              <button className="book-button mobile-only"> Book Now</button>
             </div>
           </div>
         </>

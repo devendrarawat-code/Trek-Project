@@ -84,6 +84,14 @@ const TrekkingPage = () => {
         {" "}
         <HighlightedText text={"Choose the perfect\n timing"} />
       </div>
+
+      <div className="side-carousel-mobile">
+<CardCarousel items={dateCards} variant="date" />
+      </div>
+        <div className="trek-highlight">
+        {" "}
+        <HighlightedText text={"Choose the perfect\n timing"} />
+      </div>
       <div className="imagecarousel-container">
         <ImageCarousel images={images} />
       </div>
