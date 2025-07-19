@@ -12,6 +12,7 @@ const RaftingCards = ({image,desc,distance,price}) => {
             <div className="description">
               <div className="upper-info">{distance} - {price}<span style={{fontSize:"15px"}}>/person</span></div>
               <div className="info">{desc}</div>
+               <button className="book-button mobile-only"> Book Now</button>
             </div>
           </div>
 </>  )

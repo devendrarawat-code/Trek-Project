@@ -38,7 +38,7 @@ const CardCarousel = ({ items, variant = "default" }) => {
   };
 
   return (
-    <div className="carousel-wrapper">
+    <>
       <div className="button-section">
         <button
           style={{ backgroundColor: "white" }}
@@ -101,7 +101,7 @@ const CardCarousel = ({ items, variant = "default" }) => {
           </div>
         ))}
       </div>
-    </div>
+      </>
   );
 };
 

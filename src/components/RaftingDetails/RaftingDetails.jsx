@@ -4,11 +4,13 @@ const RaftingDetails = () => {
   return (
     <>
      <div className="details-section">
+      <div className="upper-section">
         <div className="location">River Rafting</div>
         <div className="location-description">
        Where roaring rivers meet fearless <br /> hearts.</div>
       <div className="distance-options">
         <button>16 km</button><button>25 km</button><button>35 km</button>
+      </div>
       </div>
         <div className="highlight-section">
           <div className="highlight-title">River Rafting in Rishikesh</div>

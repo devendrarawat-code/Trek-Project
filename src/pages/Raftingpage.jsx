@@ -16,7 +16,7 @@ import ItenaryTabs from '../components/ItenaryTabs/ItenaryTabs';
 import RaftingDetails from '../components/RaftingDetails/RaftingDetails';
 import Footer from '../components/Footer/Footer';
 import RaftingBookingForm from '../components/RaftingBookingForm/RaftingBookingForm';
-
+import HighlightedText from '../components/HighlightedText/HighlightedText';
 const Raftingpage = () => {
     const images = [
     img,img2,img3,img4,img5,img6,img7
@@ -60,6 +60,22 @@ desc:"Get ready for 35 kilometers of thrilling rapids, stunning river views."
         </div>
         </div>
       </div>
+      {/* for the mobile view */}
+        <div className="rafting-highlight">
+              {" "}
+              <HighlightedText text={"Choose the perfect\n timing"} />
+            </div>
+              <div className="rafting-side-carousel-mobile">
+    {raftingCards.map((item, index) => (
+      <RaftingCards key={index} image={item.image} distance={item.distance} price={item.price} desc={item.desc}/>
+    ))}
+        </div>
+          <div className="rafting-highlight">
+              {" "}
+              <HighlightedText text={"Choose the perfect\n timing"} />
+            </div>
+
+
     <div className="imagecarousel-container">
           <ImageCarousel images={images} />
         </div>

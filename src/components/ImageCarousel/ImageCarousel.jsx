@@ -14,8 +14,7 @@ const ImageCarousel = ({images=[]}) => {
     }
   };
   return (
-    <>
-      <div className="carousel-grid">
+     <>
         <button className="scroll-btn left" onClick={() => scroll("left")}>
           <svg
             width="24"
@@ -67,7 +66,6 @@ const ImageCarousel = ({images=[]}) => {
             />
           </svg>
         </button>
-      </div>
     </>
   );
 };

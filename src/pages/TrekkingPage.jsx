@@ -74,24 +74,24 @@ const TrekkingPage = () => {
               </div>
             </div>
           </div>
-          <div className="side-carousel">
+          <div className="trek-side-carousel">
             <CardCarousel items={dateCards} variant="date" />
           </div>
         </div>
       </div>
       {/* for the mobile view */}
-      <div className="trek-highlight">
+         <div className="trek-highlight">
         {" "}
         <HighlightedText text={"Choose the perfect\n timing"} />
       </div>
-
-      <div className="side-carousel-mobile">
+      <div className="trek-side-carousel-mobile">
 <CardCarousel items={dateCards} variant="date" />
       </div>
         <div className="trek-highlight">
         {" "}
         <HighlightedText text={"Choose the perfect\n timing"} />
       </div>
+      {/* {desktop view} */}
       <div className="imagecarousel-container">
         <ImageCarousel images={images} />
       </div>

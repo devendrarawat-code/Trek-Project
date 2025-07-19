@@ -97,7 +97,7 @@ const ValleyDetails = () => {
             <span className="description">Adventure included</span>
           </div>
         </div>
-         <hr className="line"/>
+         <hr className="line-2"/>
          </div>
         <div className="highlight-section">
           <div className="highlight-title">Highlights of the trip</div>
