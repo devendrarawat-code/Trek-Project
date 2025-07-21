@@ -904,6 +904,19 @@ display: none;
   border-radius: 10px;
   height: fit-content;
 }
+.close-booking-btn{
+  display: none;
+}
+.row-inputs,.row{
+  display: flex;
+ gap: 15px;
+}
+
+.mobile-label{
+  font-size: 12px;
+  color: #424242;
+  display: none;
+}
 .heading {
   color: #000000cc;
   height: 31px;
@@ -1133,13 +1146,16 @@ flex:2;
     url(src/assets/image.png);
 }
 
-.rafting-subtitle-container {
+.rafting-subtitle-container,.rafting-subtitle-container-mobile,.trek-subtitle-container-mobile {
   height: 70px;
   width: 230px;
   top: 353px;
   left: 69px;
   font-size: 20px;
   position: absolute;
+}
+.rafting-subtitle-container-mobile,.trek-subtitle-container-mobile{
+  display: none;
 }
 .rafting-side-carousel {
   display: flex;
@@ -1202,27 +1218,36 @@ flex:2;
   flex-direction: column;
   gap: 15px;
 }
-.distances,
+.distance,
 .slots {
   display: flex;
   gap: 10px;
 }
-.distances button {
+.distance button {
   width: 120px;
   height: 40px;
   border-radius: 5px;
-  background: #f37002;
   border: none;
-  color: #ffffff;
+  color:#000000;
+  cursor: pointer;
+}
+button.active{
+  background-color: #f37002;
+  color: #eee;
 }
 .slots button {
   width: 120px;
   height: 40px;
   border-radius: 5px;
-  background: #f37002;
   border: none;
-  color: #ffffff;
+  cursor: pointer;
+  color: #000000;
 }
+.slot.active{
+  background-color: #f37002;
+  color: #eee;
+}
+
 .total-price {
   text-align: center;
   align-content: center;
@@ -1425,7 +1450,8 @@ flex:2;
 
   .subtitle-container,
   .trek-subtitle-container,
-  .rafting-subtitle-container {
+  .rafting-subtitle-container,
+  .rafting-subtitle-container-mobile,.trek-subtitle-container-mobile{
     height: 45px;
     width: 142px;
     top: 261px;
@@ -1433,8 +1459,14 @@ flex:2;
     font-size: 14px;
     position: absolute;
   }
+  .rafting-subtitle-container{
+    display: none;
+  }
+  .rafting-subtitle-container-mobile,.trek-subtitle-container-mobile{
+    display: block;
+  }
    .trek-subtitle-container,
-  .rafting-subtitle-container {
+  .rafting-subtitle-container,.rafting-subtitle-container-mobile,.trek-subtitle-container-mobile {
     top: 140px;
   }
 .trek-trustbox-container {
@@ -1712,8 +1744,8 @@ width: 90vw;
   .btn-orange-1,
   .btn-orange-2,
   .btn-orange-3 {
-    font-size: 16px;
-    height: 60px;
+    font-size: 12px;
+    height: 45px;
   }
 
   .discount-box {
@@ -1724,15 +1756,98 @@ width: 90vw;
   .booking-section {
     max-width: 100%;
   }
-.booking-one{
-  display: none;
+.lower-booking,.price-box{
+display: none;
 }
-  .form-box {
-    padding: 15px;
-  }
+.mobile-label{
+  display: block;
+}
+.close-booking-btn{
+      align-items: center;
+    display: flex;
+    border: none;
+    background-color: white;
+    height: 100%;
+    justify-content: center;
+    width: 10%;
+}
+.form-box{
+  box-sizing: border-box;
+  position: fixed;
+left: 0;
+  bottom: -100%;
+  height: 70vh;
+  z-index: 999;
+     border-radius: 15px 15px 0 0;
+  padding: 20px;
+  overflow-y: auto;
+  transition: bottom 0.4s ease-in-out;
+  border: none;
+  width: 100vw;
+  background-color: white;
+}
 
-  .form-box input {
-    height: 50px;
-    font-size: 16px;
-  }
+.form-box.slide-up-form{
+  bottom: 0;
 }
+.booking-one{
+          width: 100%;
+        min-width: 100%;
+}
+.header-part{
+display: flex;
+justify-content: space-between;
+    height: 50px;
+    width: auto;
+}
+.header-content{
+height: 50px;
+}
+.heading{
+  height: fit-content;
+      font-size: 16px;
+}
+.subheading{
+  font-size: 11px;
+}
+.name,.email,.date,.row-1,.row{
+  margin-top: 10px;
+  flex-direction: column;
+}
+.form-box .row{
+  margin-top: 10px;
+  gap: 10px;
+}
+.row-inputs{
+  display: flex;
+  gap: 10px;
+}
+.rafting-selection{
+  font-size: 12px;
+}
+.form-box input{
+  box-sizing: border-box;
+  font-size: 12px;
+  margin-top: 0px;
+  background-color: white;
+    border-radius: 3px;
+    height: 40px;
+    outline: 0;
+    padding-left: 10px;
+    width: 100%;
+}
+.total-price{
+  border-radius: 5px;
+      height: 45px;
+}
+.textarea{
+  margin-top: 20px;
+}
+.distance button,.slots button{
+  font-size: 12px;
+}
+.distance-section, .slot-section {
+    gap: 5px;
+}
+}
+

@@ -1,4 +1,5 @@
 import React from 'react'
+import { useState,useEffect } from 'react';
 import SubtitleTag from "../components/SubtitleTag/SubtitleTag";
 import ImageCarousel from '../components/ImageCarousel/ImageCarousel';
 import img from "../assets/sample.jpg"
@@ -41,8 +42,16 @@ price:"Rs.2,500",
 desc:"Get ready for 35 kilometers of thrilling rapids, stunning river views."
     },
   ]
+
+  const [isMobileFormOpen, setIsMobileFormOpen] = useState(false)
+  const handleOpenForm=()=>setIsMobileFormOpen(true)
+  const handleCloseForm=()=>setIsMobileFormOpen(false)
+    useEffect(() => {
+    document.body.style.overflow = isMobileFormOpen ? "hidden" : "auto";
+  }, [setIsMobileFormOpen]);
   return (
 <>
+<div className={`blur-wrapper ${isMobileFormOpen ? "blurred" : ""}`}>
 <div className="main">
         <div className="rafting-hero-section">
           <span className="rafting-headline-1">River Rafting
@@ -51,7 +60,10 @@ desc:"Get ready for 35 kilometers of thrilling rapids, stunning river views."
          Where roaring rivers meet <br /> fearless hearts.
           </span>
             <div className="rafting-subtitle-container">
-        <SubtitleTag label="Book Now" className={SubtitleTag} />
+        <SubtitleTag label="Book Now" className={SubtitleTag}  />
+        </div>
+            <div className="rafting-subtitle-container-mobile" onClick={()=>setIsMobileFormOpen(true)} >
+        <SubtitleTag label="Book Now" className={SubtitleTag}  />
         </div>
         <div className="rafting-side-carousel">
     {raftingCards.map((item, index) => (
@@ -84,8 +96,9 @@ desc:"Get ready for 35 kilometers of thrilling rapids, stunning river views."
           <RaftingDetails/>
         </div>
         <div className="booking-one">
-          <PriceBox price={1000} originalprice={1500}/>
-  <RaftingBookingForm/>
+          <PriceBox price={1000} originalprice={1500}/>    
+  <RaftingBookingForm isMobileFormOpen={isMobileFormOpen} onClose={()=>setIsMobileFormOpen(false)}/>
+  <div className="lower-booking">
         <div className="rafting-trust-box">
             <div className="circle-box">
               <div className="circle first"></div>
@@ -103,10 +116,13 @@ desc:"Get ready for 35 kilometers of thrilling rapids, stunning river views."
             <hr />
             <button>Request a callback</button>
           </div>
-        </div>
+          </div>
+  </div>
+
       </div>
      
       <Footer/>
+      </div>
 </>
   )
 }
