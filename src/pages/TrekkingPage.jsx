@@ -15,6 +15,7 @@ import img4 from "../assets/main-image.jpg";
 import img5 from "../assets/logo.jpg";
 import img6 from "../assets/ValleyOfFLowers.png";
 import img7 from "../assets/sample2.png";
+import Footer from "../components/Footer/Footer";
 
 
 
@@ -113,6 +114,7 @@ const TrekkingPage = () => {
           <BookingForm isMobileFormOpen={isMobileFormOpen} onClose={()=>setIsMobileFormOpen(false)} />
         </div>
       </div>
+      <Footer/>
     </>
   );
 };

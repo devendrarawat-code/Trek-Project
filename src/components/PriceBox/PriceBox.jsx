@@ -12,8 +12,7 @@ const PriceBox = ({price,originalprice}) => {
             <p className="strike">INR {originalprice}</p>
             </div>
           <div className="rating-text">
-            4.9{" "}
-            <span className="star">
+            <div className="text">4.9</div>
               <svg
                 width="20"
                 height="20"
@@ -26,7 +25,6 @@ const PriceBox = ({price,originalprice}) => {
                   fill="#F37002"
                 />
               </svg>
-            </span>
           </div>
           </div>
           <hr className='line-1' />

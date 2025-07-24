@@ -869,10 +869,16 @@ display: none;
   color: #00000080;
 }
 .rating-text {
+  display: flex;
   font-weight: 500;
   font-size: 64px;
+}
+.text{
   display: flex;
-  align-items: center;
+align-items: center;
+}
+.rating-text svg{
+  vertical-align: top;
 }
 .line-1 {
   margin: 25px 0px 14px 0px;

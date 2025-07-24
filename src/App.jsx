@@ -6,7 +6,7 @@ import Raftingpage from './pages/Raftingpage'
 function App() {
   return (
     <>
-   {/* <Homepage/> */}
+   <Homepage/>
    <TrekkingPage/>
    <Raftingpage/>
     </>
