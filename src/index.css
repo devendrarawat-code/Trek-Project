@@ -232,7 +232,7 @@ body {
   letter-spacing: 0%;
   padding: 10px 0px 0px 24px;
 }
-.rating {
+.rating{
   font-family: Poppins;
   font-weight: 500;
   font-size: 64px;
@@ -677,6 +677,7 @@ Escape */
   background: #0000004f;
 }
 .trek-rating {
+  margin-top: 20px;
   padding-left: 24px;
   font-family: Poppins;
   font-weight: 500;
@@ -685,6 +686,10 @@ Escape */
   letter-spacing: 0%;
   vertical-align: middle;
 }
+.trek-rating svg{
+  vertical-align: top;
+}
+
 
 /* side carousel containing pictures for trekking and rafting page */
 .trek-side-carousel {
