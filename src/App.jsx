@@ -7,7 +7,7 @@ function App() {
   return (
     <>
    {/* <Homepage/> */}
-   {/* <TrekkingPage/> */}
+   <TrekkingPage/>
    <Raftingpage/>
     </>
   )

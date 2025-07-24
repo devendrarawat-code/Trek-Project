@@ -13,27 +13,27 @@ const Footer = () => {
         <div className="footer-grid">
             <div className="footer-column">
                 <h4>Contact</h4>
-                <p>+91-7302040324</p>
+                <div>+91-7302040324</div>
               <div>Rishikesh <br /> Uttarakhand, 249175</div>
               <div>contact@ibexiceaxe.com</div>
             </div>
             <div className="footer-column">
                 <h4>Navigate</h4>
-                <p>Trekking</p>
+                <div>Trekking</div>
               <div>Rafting</div>
               <div>Rental</div>
               <div>Home</div>
             </div>
             <div className="footer-column">
                 <h4>Social</h4>
-                <p>Facebook</p>
+                <div>Facebook</div>
               <div>Instagram</div>
               <div>LinkedIn</div>
               <div>X</div>
             </div>
             <div className="footer-column">
                 <h4>Legal</h4>
-                <p>Terms & conditions</p>
+                <div>Terms & conditions</div>
               <div> Cancellation policy</div>
               <div>Refund Policy</div>
             </div> 

@@ -645,16 +645,13 @@ Escape */
   color: #ffffff;
 }
 .footer-grid {
-  padding-right: 200px;
   color: #ffffffcc;
-  width: auto;
   height: 250px;
   margin-top: 81px;
-  display: flex;
   justify-content: space-between;
-  gap: 30px;
+ display: grid;
+ grid-template-columns: 25% 20% 20% 20%;
 }
-
 .footer-bottom {
   border-top: 1px solid #ffffff;
   display: flex;
@@ -1256,6 +1253,7 @@ button.active{
   height: 70px;
   background-color: #f37002;
   border-width: 2px;
+  border-radius: 5px;
   color: #ffffff;
 }
 .rafting-trust-box {
@@ -1610,19 +1608,6 @@ font-size: 16px;
     margin-top: 15px;
   }
 
-  .footer {
-    height: auto;
-  }
-
-  .footer-grid {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .footer-tagline {
-    font-size: 32px;
-  }
-
   .price-section,
   .includes-row {
     flex-direction: column;
@@ -1849,5 +1834,41 @@ height: 50px;
 .distance-section, .slot-section {
     gap: 5px;
 }
+  .upper-footer{
+    box-sizing: border-box;
+    padding:30px 20px 20px 20px;
+    width: 100%;
+    height: auto;
+  }
+
+  .footer-tagline {
+    font-size: 28px;
+    line-height: 140%;
+  }
+
+  .footer-grid {
+    margin-top: 10px;
+    height: auto;
+flex-wrap: wrap;
+display: flex;
+gap: 10px;
+  }
+
+  .footer-bottom {
+    font-size: 16px;
+    height: auto;
+    padding: 10px 0;
+  }
+  .column-1{
+    gap: 20px;
+display: flex;
+width: 80vw;
+justify-content: space-between;
+  }
+
+  .footer {
+    height: auto;
+  }
 }
+
 
